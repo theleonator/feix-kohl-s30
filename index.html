@@ -569,6 +569,7 @@
   <a href="#nightlife">Nightlife</a>
   <a href="#budget">Budget</a>
   <a href="#gaestebuch">Grüße</a>
+  <a href="#karte">Karte</a>
 </nav>
 
 <!-- HERO -->
@@ -806,7 +807,7 @@
         <div style="padding:0.9rem 1.25rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
           <div>
             <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em;">Datum</div>
-            <div style="font-family:'Space Mono',monospace; font-size:0.75rem; color:var(--white);">09. AUG 2026</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.75rem; color:var(--white);">10. AUG 2026</div>
           </div>
           <div>
             <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em;">Klasse</div>
@@ -1255,6 +1256,88 @@
     </ul>
   </div>
 
+  <!-- KARTE -->
+  <div class="card full-width" id="karte">
+    <div class="card-accent"></div>
+    <h2>Karte · Split</h2>
+    <p class="card-desc">Flughafen · Unterkunft · Clubs & Bars</p>
+
+    <!-- Legend -->
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+      <div style="display:flex; align-items:center; gap:0.5rem; font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted);">
+        <div style="width:12px; height:12px; border-radius:50%; background:#2d6ef5; flex-shrink:0;"></div>✈️ Flughafen Split
+      </div>
+      <div style="display:flex; align-items:center; gap:0.5rem; font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted);">
+        <div style="width:12px; height:12px; border-radius:50%; background:#c9a84c; flex-shrink:0;"></div>🏠 Unterkunft
+      </div>
+      <div style="display:flex; align-items:center; gap:0.5rem; font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted);">
+        <div style="width:12px; height:12px; border-radius:50%; background:#ff2d42; flex-shrink:0;"></div>🍸 Clubs & Bars
+      </div>
+    </div>
+
+    <div id="map" style="width:100%; height:480px; border-radius:2px; border:1px solid var(--border); overflow:hidden; background:var(--deep);"></div>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    (function() {
+      var map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView([43.508, 16.440], 13);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap © CARTO',
+        subdomains: 'abcd', maxZoom: 19
+      }).addTo(map);
+
+      function makeIcon(color, emoji) {
+        return L.divIcon({
+          className: '',
+          html: `<div style="
+            background:${color};
+            width:36px; height:36px;
+            border-radius:50% 50% 50% 0;
+            transform:rotate(-45deg);
+            border:2px solid rgba(255,255,255,0.3);
+            box-shadow:0 2px 8px rgba(0,0,0,0.5);
+            display:flex; align-items:center; justify-content:center;
+          "><span style="transform:rotate(45deg); font-size:15px; line-height:1;">${emoji}</span></div>`,
+          iconSize: [36, 36],
+          iconAnchor: [18, 36],
+          popupAnchor: [0, -38]
+        });
+      }
+
+      var popupStyle = 'font-family:Space Mono,monospace; font-size:0.7rem; line-height:1.5; color:#0a0a0f;';
+
+      // Flughafen
+      L.marker([43.5389, 16.2980], {icon: makeIcon('#2d6ef5','✈️')}).addTo(map)
+        .bindPopup(`<div style="${popupStyle}"><strong>Flughafen Split (SPU)</strong><br>Ankunft: 07.08.2026<br>LH4282 · 05:15 ab FRA</div>`);
+
+      // Unterkunft
+      L.marker([43.5079, 16.4402], {icon: makeIcon('#c9a84c','🏠')}).addTo(map)
+        .bindPopup(`<div style="${popupStyle}"><strong>Unterkunft (Airbnb)</strong><br>Ulica Antuna Mihanovica 29<br>Split · bereits bezahlt ✅</div>`);
+
+      // Clubs & Bars
+      L.marker([43.5034, 16.4423], {icon: makeIcon('#ff2d42','🎵')}).addTo(map)
+        .bindPopup(`<div style="${popupStyle}"><strong>Vanilla Club</strong><br>Bačvice · Club<br>★★★★★ Pflichtbesuch</div>`);
+
+      L.marker([43.5031, 16.4418], {icon: makeIcon('#ff2d42','🌊')}).addTo(map)
+        .bindPopup(`<div style="${popupStyle}"><strong>Bačvice Beach Bar</strong><br>Direkt am Strand<br>★★★★☆</div>`);
+
+      L.marker([43.5083, 16.4397], {icon: makeIcon('#ff2d42','🍸')}).addTo(map)
+        .bindPopup(`<div style="${popupStyle}"><strong>Fluid Bar</strong><br>Diokletianpalast · Altstadt<br>★★★★☆ Beste Cocktails</div>`);
+
+      L.marker([43.5030, 16.4420], {icon: makeIcon('#ff2d42','🎶')}).addTo(map)
+        .bindPopup(`<div style="${popupStyle}"><strong>Academia Club</strong><br>Bačvice · House & Techno<br>★★★★☆</div>`);
+
+      L.marker([43.5085, 16.4378], {icon: makeIcon('#ff2d42','🥂')}).addTo(map)
+        .bindPopup(`<div style="${popupStyle}"><strong>Riva Promenade Bars</strong><br>Hafenpromenade<br>★★★★★ Must Do</div>`);
+
+      L.marker([43.5038, 16.4410], {icon: makeIcon('#ff2d42','🍻')}).addTo(map)
+        .bindPopup(`<div style="${popupStyle}"><strong>Strandbesäufnis auf asoziale Art</strong><br>Irgendwo am Strand<br>★★★★★ Kroatiens authentischste Experience</div>`);
+    })();
+    </script>
+  </div>
+
   <!-- GÄSTEBUCH -->
   <div class="card full-width" id="gaestebuch">
     <div class="card-accent gold"></div>
@@ -1263,7 +1346,7 @@
 
     <div class="message-list" id="message-list">
       <div class="message-bubble">
-        <div class="message-author">Team Split </div>
+        <div class="message-author">Team Split 🇭🇷</div>
         <div class="message-text">Auf 30 gemeinsame Jahre voller Unsinn, Abenteuer und noch mehr Unsinn – und jetzt feiern wir das in Split! 🥂 Herzlichen Glückwunsch, Max & Lennard!</div>
       </div>
     </div>
