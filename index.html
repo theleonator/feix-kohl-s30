@@ -562,14 +562,16 @@
 <body>
 
 <nav>
+  <a href="#agenda">Agenda</a>
   <a href="#reise">Reise</a>
   <a href="#ticket">Tickets</a>
   <a href="#packen">Packen</a>
   <a href="#aktivitaeten">Aktivitäten</a>
   <a href="#nightlife">Nightlife</a>
   <a href="#budget">Budget</a>
-  <a href="#gaestebuch">Grüße</a>
   <a href="#karte">Karte</a>
+  <a href="#trinkspiel">Trinkspiel</a>
+  <a href="#gaestebuch">Grüße</a>
 </nav>
 
 <!-- HERO -->
@@ -652,8 +654,110 @@
   </p>
 </section>
 
+<!-- AGENDA -->
+<div id="agenda" style="max-width:1100px; margin:0 auto; padding:2rem 2rem 0;">
+  <div style="background:var(--card); border:1px solid var(--border); border-radius:2px; padding:2rem; position:relative;">
+    <div style="position:absolute; top:0; left:0; width:40px; height:3px; background:var(--gold);"></div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; margin-bottom:0.3rem; margin-top:0.5rem;">Agenda</h2>
+    <p style="font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">Alles auf einen Blick · Klick = direkt zur Section</p>
 
-<!-- TICKET SECTION -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:0.75rem;">
+
+      <a href="#reise" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--blue-bright)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">🗺️</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Reise-Infos</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">Flug · Unterkunft · Team</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#ticket" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--blue-bright)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">✈️</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Flugtickets</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">LH4282 · FRA → SPU</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#packen" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--red-bright)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">🧳</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Packliste</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">inkl. Kondome & Viagra</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#aktivitaeten" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">🏖️</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Aktivitäten</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">Chaos-Edition · Split</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#nightlife" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--red-bright)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">🎵</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Nightlife</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">6 Clubs & Bars</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#budget" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">💸</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Budget</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">€280 Flug · €500 vor Ort</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#karte" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--blue-bright)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">📍</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Karte</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">Locations in Split</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#trinkspiel" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--red-bright)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">🍺</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Trinkspiel</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">Split Edition 🇭🇷</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#gaestebuch" style="text-decoration:none;">
+        <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1rem; display:flex; align-items:center; gap:0.75rem; transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.5rem;">🎂</div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--white); letter-spacing:0.05em;">Grüße</div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.55rem; color:var(--muted);">Für Max & Lennard</div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+
 <div style="max-width:1100px; margin:0 auto; padding:2rem 2rem 0;">
   <div style="background:var(--card); border:1px solid var(--border); border-radius:2px; padding:2rem; position:relative;">
     <div style="position:absolute; top:0; left:0; width:40px; height:3px; background:var(--blue-bright);"></div>
@@ -1338,6 +1442,65 @@
     </script>
   </div>
 
+  <!-- TRINKSPIEL -->
+  <div class="card full-width" id="trinkspiel">
+    <div class="card-accent red"></div>
+    <h2>Trinkspiel · Split Edition 🍺</h2>
+    <p class="card-desc">Wer verliert, trinkt · Kein Erbarmen</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
+
+      <!-- WÜRFELSPIEL -->
+      <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1.5rem;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; color:var(--white); letter-spacing:0.05em; margin-bottom:0.3rem;">🎲 Würfel des Schicksals</div>
+        <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:var(--muted); margin-bottom:1rem;">Würfle – und leide</div>
+        <div id="dice-result" style="font-size:4rem; text-align:center; margin:1rem 0; min-height:5rem; display:flex; align-items:center; justify-content:center;">🎲</div>
+        <div id="dice-rule" style="font-family:'Space Mono',monospace; font-size:0.7rem; color:var(--blue-bright); text-align:center; min-height:2.5rem; line-height:1.5; padding:0 0.5rem;"></div>
+        <button onclick="rollDice()" style="width:100%; margin-top:1rem; background:var(--blue-bright); color:white; border:none; padding:0.7rem; font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.1em; cursor:pointer; border-radius:2px; transition:background 0.2s;" onmouseover="this.style.background='var(--red-bright)'" onmouseout="this.style.background='var(--blue-bright)'">WÜRFELN 🎲</button>
+      </div>
+
+      <!-- WAHRHEIT ODER PFLICHT -->
+      <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1.5rem;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; color:var(--white); letter-spacing:0.05em; margin-bottom:0.3rem;">🔥 Wahrheit oder Suff</div>
+        <div style="font-family:'Space Mono',monospace; font-size:0.6rem; color:var(--muted); margin-bottom:1rem;">Wahrheit = peinlich · Nein = trinken</div>
+        <div id="truth-card" style="background:var(--card); border:1px solid var(--border); border-radius:2px; padding:1.25rem; min-height:5rem; display:flex; align-items:center; justify-content:center; text-align:center; font-size:0.95rem; color:var(--white); line-height:1.5; margin-bottom:1rem;">Drück den Knopf...</div>
+        <button onclick="drawTruth()" style="width:100%; background:var(--red-bright); color:white; border:none; padding:0.7rem; font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.1em; cursor:pointer; border-radius:2px; transition:background 0.2s;" onmouseover="this.style.background='var(--blue-bright)'" onmouseout="this.style.background='var(--red-bright)'">NEUE FRAGE 🔥</button>
+      </div>
+
+    </div>
+
+    <!-- SPLIT-REGELN -->
+    <div style="background:var(--deep); border:1px solid var(--border); border-radius:2px; padding:1.5rem;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; color:var(--gold); letter-spacing:0.05em; margin-bottom:1rem;">📋 Split-Trinkregen (immer aktiv)</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:0.6rem;">
+        <div style="display:flex; gap:0.75rem; align-items:flex-start; padding:0.6rem; background:var(--card); border-radius:2px;">
+          <span style="font-size:1.1rem; flex-shrink:0;">🕔</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted); line-height:1.5;">Wer als Letzter fertig ist beim Bestellen → trinkt</span>
+        </div>
+        <div style="display:flex; gap:0.75rem; align-items:flex-start; padding:0.6rem; background:var(--card); border-radius:2px;">
+          <span style="font-size:1.1rem; flex-shrink:0;">📸</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted); line-height:1.5;">Wer ein Foto macht ohne Erlaubnis → trinkt</span>
+        </div>
+        <div style="display:flex; gap:0.75rem; align-items:flex-start; padding:0.6rem; background:var(--card); border-radius:2px;">
+          <span style="font-size:1.1rem; flex-shrink:0;">📱</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted); line-height:1.5;">Wer sein Handy beim Essen checkt → trinkt</span>
+        </div>
+        <div style="display:flex; gap:0.75rem; align-items:flex-start; padding:0.6rem; background:var(--card); border-radius:2px;">
+          <span style="font-size:1.1rem; flex-shrink:0;">🗣️</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted); line-height:1.5;">Wer „ich bin eigentlich müde" sagt → trinkt doppelt</span>
+        </div>
+        <div style="display:flex; gap:0.75rem; align-items:flex-start; padding:0.6rem; background:var(--card); border-radius:2px;">
+          <span style="font-size:1.1rem; flex-shrink:0;">💶</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted); line-height:1.5;">Wer kein Bargeld dabei hat → trinkt</span>
+        </div>
+        <div style="display:flex; gap:0.75rem; align-items:flex-start; padding:0.6rem; background:var(--card); border-radius:2px;">
+          <span style="font-size:1.1rem; flex-shrink:0;">🐢</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--muted); line-height:1.5;">Wer Dinocops Schildkröte Nico vergisst → trinkt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- GÄSTEBUCH -->
   <div class="card full-width" id="gaestebuch">
     <div class="card-accent gold"></div>
@@ -1451,7 +1614,45 @@ function addMessage() {
   document.getElementById('msg-text').value = '';
 }
 
-function escapeHtml(str) {
+// ── TRINKSPIEL ──
+const diceRules = [
+  { face: '1️⃣', text: 'Alle trinken – du hast versagt als Würfler.' },
+  { face: '2️⃣', text: 'Dr. Sex erklärt warum das eine medizinische Indikation ist. Dann trinkt er.' },
+  { face: '3️⃣', text: 'Wähle jemanden aus. Die Person trinkt UND muss eine Wahrheit sagen.' },
+  { face: '4️⃣', text: 'Dinocop trinkt – egal was. Immer. Regel ist Regel.' },
+  { face: '5️⃣', text: 'Alle außer dir trinken. Genieße diesen seltenen Moment der Würde.' },
+  { face: '6️⃣', text: '🎉 JACKPOT! Du verteilst 3 Schlucke nach Belieben. Absolute Macht.' },
+];
+
+function rollDice() {
+  const r = diceRules[Math.floor(Math.random() * diceRules.length)];
+  document.getElementById('dice-result').textContent = r.face;
+  document.getElementById('dice-rule').textContent = r.text;
+}
+
+const truthCards = [
+  'Wer war dein peinlichster Moment auf Reisen?',
+  'Was passiert in Split, bleibt in Split – aber sag es trotzdem: Was hoffst du passiert?',
+  'Wen aus der Gruppe würdest du NIE mit auf Reisen nehmen? Begründung Pflicht.',
+  'Was ist das Dümmste, das du je betrunken gemacht hast?',
+  'Pornobalken oder Dr. Sex – wer ist der größere Chaot? Begründe.',
+  'Hast du schon mal jemanden angelogen um nicht feiern gehen zu müssen?',
+  'Was ist dein geheimster Reise-Snack den du niemand zeigst?',
+  'Wen rufst du an wenn du um 4 Uhr morgens in fremder Stadt feststeckst?',
+  'Welche Regel aus den Split-Trinkregeln wirst du als Erstes brechen?',
+  'Wie viele Tage würdest du brauchen um Nico die Schildkröte durch den Zoll zu schmuggeln?',
+  'Was ist die peinlichste Sache die du je auf Urlaub gekauft hast?',
+  'Dinocop schläft auf dem Gepäckband ein – was machst du? Ehrliche Antwort.',
+];
+
+let lastTruth = -1;
+function drawTruth() {
+  let idx;
+  do { idx = Math.floor(Math.random() * truthCards.length); } while (idx === lastTruth);
+  lastTruth = idx;
+  document.getElementById('truth-card').textContent = truthCards[idx];
+}
+
   return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 </script>
